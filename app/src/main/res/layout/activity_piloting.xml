@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+    <com.parrot.bebopflyingbanana.video.StreamImageView
+        android:id="@+id/streamImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".PilotingActivity"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emergency"
+            android:background="#c60000"
+            android:textColor="#FFFFFF"
+            android:alpha="0.30"
+            android:id="@+id/emergencyBt"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:width="110dp"/>
+
+        <ToggleButton
+            android:id="@+id/togglebuttonlanding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="Landing"
+            android:textOff="Take Off"
+            android:alpha="0.30"
+            android:onClick="onToggleLanding"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:width="100dp"/>
+
+        <ToggleButton
+            android:id="@+id/togglebuttonauto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="Manual"
+            android:textOff="Auto"
+            android:alpha="0.40"
+            android:onClick="onToggleAuto"
+            android:width="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="right"
+            android:alpha="0.40"
+            android:id="@+id/yawRightBt"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="left"
+            android:alpha="0.40"
+            android:id="@+id/rollLeftBt"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:width="50dp"/>
+
+
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="left"
+            android:alpha="0.40"
+            android:id="@+id/yawLeftBt"
+            android:layout_below="@+id/gazUpBt"
+            android:layout_toLeftOf="@+id/gazUpBt"
+            android:layout_toStartOf="@+id/gazUpBt"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="right"
+            android:alpha="0.40"
+            android:id="@+id/rollRightBt"
+            android:width="20dp"
+            android:layout_above="@+id/backBt"
+            android:layout_toRightOf="@+id/backBt"
+            android:layout_toEndOf="@+id/backBt"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="up"
+            android:alpha="0.40"
+            android:id="@+id/gazUpBt"
+            android:layout_above="@+id/yawRightBt"
+            android:layout_toLeftOf="@+id/yawRightBt"
+            android:layout_toStartOf="@+id/yawRightBt"
+            android:width="100dp"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="down"
+            android:alpha="0.40"
+            android:id="@+id/gazDownBt"
+            android:width="100dp"
+            android:layout_below="@+id/yawRightBt"
+            android:layout_toRightOf="@+id/yawLeftBt"
+            android:layout_toEndOf="@+id/yawLeftBt"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="forward"
+            android:alpha="0.40"
+            android:id="@+id/forwardBt"
+            android:layout_alignTop="@+id/gazUpBt"
+            android:layout_toRightOf="@+id/rollLeftBt"
+            android:layout_toEndOf="@+id/rollLeftBt"
+            android:width="100dp"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:alpha="0.40"
+            android:id="@+id/backBt"
+            android:layout_below="@+id/rollLeftBt"
+            android:layout_toRightOf="@+id/rollLeftBt"
+            android:layout_toEndOf="@+id/rollLeftBt"
+            android:width="100dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Battery: "
+            android:textColor="#262626"
+            android:alpha="0.75"
+            android:id="@+id/BatttextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="XXX%"
+            android:textColor="#262626"
+            android:alpha="0.75"
+            android:id="@+id/batteryLabel"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/BatttextView"
+            android:layout_toEndOf="@+id/BatttextView"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Photo"
+            android:alpha="0.40"
+            android:id="@+id/photoBt"
+            android:width="50dp"
+            android:layout_toLeftOf="@+id/togglebuttonauto"
+            android:layout_toStartOf="@+id/togglebuttonauto" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Roll"
+            android:textColor="#FFFFFF"
+            android:alpha="0.75"
+            android:id="@+id/textView2"
+            android:width="50dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rollLeftBt"
+            android:layout_toEndOf="@+id/rollLeftBt"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Yaw"
+            android:textColor="#FFFFFF"
+            android:alpha="0.75"
+            android:id="@+id/textView3"
+            android:width="50dp"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_alignRight="@+id/gazDownBt"
+            android:layout_alignEnd="@+id/gazDownBt"
+            android:gravity="center_horizontal"/>
+
+    </RelativeLayout>
+</RelativeLayout>
