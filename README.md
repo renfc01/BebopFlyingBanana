@@ -10,4 +10,6 @@ Created using Java, incorporating ARDroneSDK3 and OpenCV 3.0 libraries in a Linu
 
 Team members: Juliana and Renfred
 
+Final Milestone Video link: https://www.youtube.com/watch?v=KKJJ_aPOeZo 
+
 //Uploaded for archiving purposes.
